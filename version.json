@@ -4,6 +4,6 @@
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "Dodano obsługę wielu alarmów, miniaturki tras, automatyczny i ręczny wybór okna sprawdzania korków oraz ekran powitalny.",
+  "releaseNotes": "Naprawiono obsługę samsungów. Dzięki Mario :)",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk"
 }
