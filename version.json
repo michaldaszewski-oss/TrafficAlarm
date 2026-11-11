@@ -1,0 +1,9 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1",
+  "appName": "TrafficAlarm",
+  "author": "Misiek",
+  "signature": "app by Misiek",
+  "releaseNotes": "Dodano obsługę wielu alarmów, miniaturki tras, automatyczny i ręczny wybór okna sprawdzania korków oraz ekran powitalny.",
+  "apkUrl": "https://github.com/Misiek/TrafficAlarm/releases/latest/download/TrafficAlarm-app-debug.apk"
+}
