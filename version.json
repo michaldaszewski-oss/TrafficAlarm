@@ -5,5 +5,5 @@
   "author": "Misiek",
   "signature": "app by Misiek",
   "releaseNotes": "Dodano obsługę wielu alarmów, miniaturki tras, automatyczny i ręczny wybór okna sprawdzania korków oraz ekran powitalny.",
-  "apkUrl": "https://github.com/Misiek/TrafficAlarm/releases/latest/download/TrafficAlarm-app-debug.apk"
+  "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk"
 }
