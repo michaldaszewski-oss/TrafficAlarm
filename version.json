@@ -1,9 +1,9 @@
 {
-  "versionCode": 4,
-  "versionName": "1.3",
+  "versionCode": 5,
+  "versionName": "1.5",
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "Poprawiono algorytm. Dodano poprawiony wykres czasu dojazdu oraz wiele innych usprawnień.",
+  "releaseNotes": "Dodano interakcję historii korka. Usprawniono chronologię listy alarmów oraz kreator dodawania alarmu.",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk"
 }
