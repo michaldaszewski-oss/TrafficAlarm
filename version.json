@@ -4,6 +4,6 @@
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "Dodano interakcję historii korka. Usprawniono chronologię listy alarmów oraz kreator dodawania alarmu.",
+  "releaseNotes": "1. Naprawa wyznaczania interwałów i okna sprawdzania korków: automatyczne zacieśnianie do 60s tuż przed wyjściem lub przy skoku korka (dla wyjścia za 14 min sprawdzanie natychmiastowe co 60s). 2. Koniec ze sztywnym 90m: okno czuwania liczone proporcjonalnie do trasy (~50-60 min dla 30 min jazdy). 3. Krystalicznie czytelne wskaźniki interwału i statusu monitoringu w aplikacji.",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk"
 }
