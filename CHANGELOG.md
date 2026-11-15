@@ -4,20 +4,27 @@ Wszystkie wydania aplikacji **TrafficAlarm** wraz z podsumowaniem wprowadzonych 
 
 ---
 
-## [v1.9] - 2026-11-15
-### 📋 Historia zmian (Changelog) w aplikacji & Poprawki stabilności
-- **Dedykowany przycisk w zakładce Opcje:**
-  - Dodano przycisk *„Historia zmian (Changelog)”* w sekcji aktualizacji oraz w sekcji informacyjnej aplikacji.
-  - Otwiera pełne okno dialogowe z kompletnym, interaktywnym wykazem wszystkich wydań aplikacji (od v1.0 do v1.9).
-- **Interaktywne okno historii wersji:**
-  - Wersje oznaczone czytelnymi etykietami (np. *Aktualna v1.9*, *Widżet v1.8*, *Predykcja ruchu v1.7*, *Adaptacyjny interwał v1.6*, itd.).
-  - Szczegółowe podsumowanie nowości, usprawnień i poprawek działania budzika dla każdego wydania.
-  - Bezpośredni przycisk przejścia do repozytorium GitHub i oficjalnego dokumentu CHANGELOG.md.
+## [v1.9.1] - 2026-11-15
+### 🎯 Poprawka godziny celu na ekranie alarmu & Hotfix OTA
 - **Poprawka planowanej godziny u celu na ekranie budzika:**
   - Usunięto błąd, przez który na pełnoekranowym ekranie dzwoniącego alarmu godzina u celu była na sztywno zafiksowana na domyślnej wartości `08:00` (zamiast rzeczywistej godziny dzwoniącego alarmu, np. `14:00`).
   - Precyzyjne przekazywanie `targetHour` i `targetMinute` przez cały łańcuch wywołań (`AlarmScheduler` ➔ `TrafficAlarmReceiver` ➔ `AlarmService` ➔ `AlarmActivity`).
 - **Eliminacja wielokrotnego dzwonienia przy sprawdzaniu sytuacji:**
-  - Dodano dedykowaną flagę `hasPreparationFiredToday`, izolację alarmów testowych (`test_`), debouncing 12s w `AlarmService` oraz ochronę przed ponownym wzbudzaniem dzwonka podczas adaptacyjnych sprawdzeń korków.
+  - Dodano dedykowaną flagę `hasPreparationFiredToday`, debouncing 12s w `AlarmService` oraz pełną izolację alarmów testowych (`test_`).
+- **Podbicie wersji do v1.9.1 (kod wersji 11):**
+  - Umożliwia natychmiastowe wykrycie i zainstalowanie poprawki przez moduł automatycznych aktualizacji (OTA) w telefonie.
+
+---
+
+## [v1.9] - 2026-11-15
+### 📋 Historia zmian (Changelog) w aplikacji
+- **Dedykowany przycisk w zakładce Opcje:**
+  - Dodano przycisk *„Historia zmian (Changelog)”* w sekcji aktualizacji oraz w sekcji informacyjnej aplikacji.
+  - Otwiera pełne okno dialogowe z kompletnym, interaktywnym wykazem wszystkich wydań aplikacji (od v1.0 do v1.9.1).
+- **Interaktywne okno historii wersji:**
+  - Wersje oznaczone czytelnymi etykietami (np. *Aktualna v1.9.1*, *Widżet v1.8*, *Predykcja ruchu v1.7*, *Adaptacyjny interwał v1.6*, itd.).
+  - Szczegółowe podsumowanie nowości, usprawnień i poprawek działania budzika dla każdego wydania.
+  - Bezpośredni przycisk przejścia do repozytorium GitHub i oficjalnego dokumentu CHANGELOG.md.
 
 ---
 
