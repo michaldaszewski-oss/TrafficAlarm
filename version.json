@@ -1,10 +1,10 @@
 {
-  "versionCode": 13,
-  "versionName": "1.9.3",
+  "versionCode": 14,
+  "versionName": "1.9.4",
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "1. Naprawa geocodingu tras międzymiastowych (wyeliminowano błąd wyznaczania trasy Warszawa - Kraków jako 153 km do Skarżyska-Kamiennej). 2. Inteligentny ranking dopasowań w Photon i Nominatim (priorytetyzacja miast nad przypadkowymi ulicami). 3. Realistyczne szacowanie szczytu dla tras długodystansowych bez zawyżania prędkości autostradowych. 4. Dynamiczne okno czuwania rozszerzone do 12h dla wielogodzinnych podróży.",
+  "releaseNotes": "1. Pełna integracja Google Directions API (maps.googleapis.com) – uniwersalny endpoint Google Maps z precyzyjnym czasem w korkach i dokładnym dystansem (Warszawa - Katowice ~298 km, Warszawa - Kraków ~295 km). 2. Wbudowany słownik współrzędnych wszystkich miast wojewódzkich i głównych w Polsce (odpowiedź w 0 ms, 100% offline, brak pomyłek z ulicami np. ul. Katowicka). 3. Google Geocoding API w wyszukiwarce i podglądzie mapy. 4. Rysowanie trasy z Google Directions (encoded polyline) na miniaturce mapki. 5. Wyeliminowano błąd pokazywania centrum Warszawy po wpisaniu Kraków.",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk",
   "Overwrite": true
 }

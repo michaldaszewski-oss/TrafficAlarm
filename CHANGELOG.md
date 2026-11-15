@@ -4,6 +4,25 @@ Wszystkie wydania aplikacji **TrafficAlarm** wraz z podsumowaniem wprowadzonych 
 
 ---
 
+## [v1.9.4] - 2026-11-15
+### 🌐 Pełna integracja Google Directions API & Szybki słownik miast
+- **Priorytetowe Google Directions API dla kluczy Google Maps:**
+  - Dodano obsługę uniwersalnego punktu końcowego `https://maps.googleapis.com/maps/api/directions/json`, który jest domyślnie aktywny na kluczach Google Maps API (w przeciwieństwie do nowego Routes API v2 wymagającego odrębnego włączenia w Google Cloud Console).
+  - Precyzyjne czasy w korkach (`duration_in_traffic`), rzeczywista odległość drogowa (np. Warszawa – Katowice ~298 km, Warszawa – Kraków ~295 km).
+- **Wbudowany błyskawiczny słownik współrzędnych miast w Polsce:**
+  - Wprowadzono in-memory słownik wszystkich miast wojewódzkich i głównych ośrodków miejskich w Polsce.
+  - Czas odpowiedzi: `0 ms`, 100% offline, zerowa zależność od serwerów zewnętrznych.
+  - Wyeliminowano całkowicie ryzyko, że wpisanie np. „Katowice” w wyszukiwarce lub geocodingu dopasuje „ulicę Katowicką w Rawie Mazowieckiej” (77 km) albo że „Kraków” dopasuje punkt w centrum Warszawy.
+- **Wyszukiwanie i geocoding przez Google Geocoding API:**
+  - W podglądzie trasy (`RouteThumbnailView`) oraz w oknie wyboru lokalizacji na mapie (`MapPickerDialog`), gdy użytkownik ma skonfigurowany klucz API, wyszukiwanie i geocoding odbywają się natywnie przez Google Geocoding API.
+- **Rysowanie trasy z Google Directions na mapie:**
+  - Podgląd mapy dekoduje geometrię trasy (`overview_polyline`) z Google Directions i renderuje wierną linię trasy bezpośrednio na kafelkach mapy.
+- **Poprawki w pickerze mapy i kafelkach trasy:**
+  - Wpisanie „Kraków” lub „Katowice” natychmiast centruje mapę na wskazanym mieście z dokładnymi współrzędnymi.
+  - Poprawiono filtry geocodingu darmowego Photon (wielkie litery `countrycode=PL`), eliminując błędne odrzucenia przez serwer Komoot.
+
+---
+
 ## [v1.9.3] - 2026-11-15
 ### 🗺️ Inteligentny geocoding & Obsługa tras międzymiastowych
 - **Wyeliminowanie błędu wyznaczania tras międzymiastowych (np. Warszawa - Kraków):**
