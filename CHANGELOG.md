@@ -4,6 +4,25 @@ Wszystkie wydania aplikacji **TrafficAlarm** wraz z podsumowaniem wprowadzonych 
 
 ---
 
+## [v1.9.3] - 2026-11-15
+### 🗺️ Inteligentny geocoding & Obsługa tras międzymiastowych
+- **Wyeliminowanie błędu wyznaczania tras międzymiastowych (np. Warszawa - Kraków):**
+  - Rozwiązano problem, w którym podanie trasy między miastami (np. Warszawa ➔ Kraków) zwracało błędną odległość `153 km` i czas `114 min` (wynikający z dopasowania ul. Krakowskiej w Skarżysku-Kamiennej zamiast właściwego miasta Kraków).
+- **Wielokryterialny ranking wyników geocodingu (Photon / Nominatim):**
+  - Przy zapytaniach o miasto wprowadzono priorytetyzację encji miejskich i administracyjnych (`place=city`, `place=town`, `boundary=administrative`).
+  - Wprowadzono karę punktową dla ulic noszących nazwę poszukiwanego miasta (np. ulica Krakowska w innej miejscowości nie przesłoni już właściwego Krakowa).
+  - Wyszukiwanie z domyślnym filtrem krajowym (`countrycode=pl`) oraz automatycznym fallbackiem globalnym dla zapytań zagranicznych.
+- **Skalowanie szczytu komunikacyjnego dla tras długodystansowych:**
+  - Zatory i godziny szczytu naliczane są realistycznie dla wyjazdu i wjazdu do aglomeracji miejskich (odcinki miejskie), eliminując sztuczne zawyżanie czasu na drogach ekspresowych i autostradach (S7/A1/A4).
+- **Dynamiczne okno czuwania dostosowane do wielogodzinnych podróży:**
+  - Zwiększono maksymalne okno czuwania z 3h do 12h, gwarantując, że rozpoczęcie monitorowania zawsze wyprzedza czas wyjazdu i dzwonienia alarmu przygotowawczego.
+- **Ujednoznacznienie zapytań do Google Routes API i Distance Matrix:**
+  - Automatyczny kontekst krajowy zapobiegający błędnemu rozpoznawaniu polskich miast przez globalne silniki Google.
+- **Awaryjne szacowanie odległości Haversine:**
+  - W przypadku chwilowej niedostępności serwerów OSRM aplikacja szacuje dystans i czas na podstawie wyznaczonych współrzędnych i współczynnika krętości dróg (zamiast sztywnego 12.4 km).
+
+---
+
 ## [v1.9.2] - 2026-11-15
 ### 🚗 Realistyczna predykcja trasy & Izolacja historii per alarm
 - **Wykres predykcji bez zmyślonych danych wstecz:**
