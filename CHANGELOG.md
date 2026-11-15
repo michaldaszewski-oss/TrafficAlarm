@@ -4,6 +4,23 @@ Wszystkie wydania aplikacji **TrafficAlarm** wraz z podsumowaniem wprowadzonych 
 
 ---
 
+## [v1.9.2] - 2026-11-15
+### 🚗 Realistyczna predykcja trasy & Izolacja historii per alarm
+- **Wykres predykcji bez zmyślonych danych wstecz:**
+  - Oś czasu wykresu rozpoczyna się ściśle od **TERAZ (`t = 0`)** do przodu (do momentu wyjazdu i dotarcia do celu).
+  - Usunięto sztuczne generowanie punktów w przeszłości (poprzednio od `-45 min`), które tworzyło fikcyjne dane przed uruchomieniem monitorowania.
+- **Wyeliminowanie fałszywego skoku korka (z 25 do 40+ min):**
+  - Usunięto automatyczne zawyżanie czasu dojazdu o 60-70% w środku dnia i w weekendy.
+  - Model prognozy opiera się na **rzeczywistych danych**: jeśli ruch na trasie jest stabilny, prognoza pozostaje płaska i wierna pomiarom (np. 25 min). Wzrost jest prognozowany tylko przy realnie wykrytym narastaniu lub w godzinach rzeczywistego szczytu roboczego (pon.–pt.).
+- **Ścisła izolacja historii pomiarów dla każdego alarmu:**
+  - Każdy profil alarmu gromadzi wyłącznie własne odczyty powiązane z trasą (`alarmId`).
+  - Wyeliminowano mieszanie czasów dojazdów pomiędzy różnymi alarmami i trasami.
+- **Zarządzanie historią trasy:**
+  - Dodano przycisk *„Wyczyść historię”* bezpośrednio w zakładce pomiarów aktywnej trasy.
+  - Wprowadzono automatyczne resetowanie historii trasy przy edycji adresu startowego lub docelowego w danym alarmie.
+
+---
+
 ## [v1.9.1] - 2026-11-15
 ### 🎯 Poprawka godziny celu na ekranie alarmu & Hotfix OTA
 - **Poprawka planowanej godziny u celu na ekranie budzika:**
