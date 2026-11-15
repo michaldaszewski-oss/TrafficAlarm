@@ -1,9 +1,9 @@
 {
-  "versionCode": 7,
-  "versionName": "1.6",
+  "versionCode": 9,
+  "versionName": "1.8",
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "1. Naprawa wyznaczania interwałów i okna sprawdzania korków: automatyczne zacieśnianie do 60s tuż przed wyjściem lub przy skoku korka (dla wyjścia za 14 min sprawdzanie natychmiastowe co 60s). 2. Koniec ze sztywnym 90m: okno czuwania liczone proporcjonalnie do trasy (~50-60 min dla 30 min jazdy). 3. Krystalicznie czytelne wskaźniki interwału i statusu monitoringu w aplikacji.",
+  "releaseNotes": "1. Całkowita naprawa widżetu ekranu głównego: widżet dynamicznie wyświetla najbliższy chronologicznie aktywny alarm z listy (aktualna trasa, cel, odliczanie, dokładny czas w korkach i czas wyjścia). Przycisk odświeżenia w widżecie bada ruch dla bieżącej trasy. 2. Zmiana tekstu przycisku zakończenia dojazdu na 'Już wyszedłem / Przełącz na kolejny dzień'. 3. Zachowane wszystkie usprawnienia v1.7 (realistyczne szacowanie na poniedziałkowy szczyt, limit 10s dzwonienia, 2 alarmy).",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk"
 }
