@@ -4,6 +4,19 @@ Wszystkie wydania aplikacji **TrafficAlarm** wraz z podsumowaniem wprowadzonych 
 
 ---
 
+## [v1.9.6] - 2026-11-20
+### 🧠 Zaawansowana estymacja szczytu Google Maps & Inteligentne dni tygodnia
+- **Oficjalne statystyki szczytu komunikacyjnego Google Maps (`traffic_model=best_guess`):**
+  - Wykorzystanie pełnego potencjału Google Directions API z parametrem `departure_time` oraz modelem predykcyjnym `traffic_model=best_guess`.
+  - Nawet przy zapytaniu wysłanym w środku nocy lub w weekend aplikacja odpytuje serwery Google o przewidywany statystyczny czas dojazdu (średnia ważona) dla konkretnego dnia tygodnia i godziny wyjazdu (np. poniedziałek 07:45 ➔ 45 minut w korkach zamiast 19 minut w nocy).
+- **Inteligentne wyznaczanie najbliższego terminu dojazdu w edytorze alarmu:**
+  - Formularz tworzenia i edycji trasy uwzględnia zdefiniowane dni tygodnia (`daysOfWeek`).
+  - Sprawdzanie trasy w weekend lub wieczorem dla alarmu roboczego (pn.-pt.) kieruje zapytanie bezpośrednio na poniedziałkowy poranny szczyt, a nie na puste drogi w sobotę lub w nocy.
+- **Czytelna informacja o predykcji ruchu:**
+  - W podsumowaniu trasy wyświetlany jest dokładny dzień i godzina, na które Google wyliczyło prognozę (np. *„Google Maps na poniedziałek 07:45: 45 min (średnia wg statystyk ruchu)”*).
+
+---
+
 ## [v1.9.5] - 2026-11-20
 ### 🚀 Prawidłowa kalkulacja tras, predykcja szczytu & Zarządzanie cache
 - **Wyeliminowanie blokady czasu dojazdu (efekt zapadki):**

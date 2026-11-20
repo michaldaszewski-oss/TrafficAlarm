@@ -1,10 +1,10 @@
 {
-  "versionCode": 15,
-  "versionName": "1.9.5",
+  "versionCode": 16,
+  "versionName": "1.9.6",
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "1. Wyeliminowano blokadę czasu dojazdu (efekt zapadki) – usunięto sztuczne nadpisywanie świeżych wyników z Google Maps i OSRM poprzednimi czasami (previousDurationMin). Czas i dystans przeliczają się natychmiastowo po każdej zmianie trasy. 2. Automatyczne przeliczanie parametrów trasy podczas edycji (debounce) w oknie alarmu. 3. Dynamiczny wykres predykcji korków – koniec z płaskim wykresem, modelowanie szczytu komunikacyjnego (Gauss). 4. Automatyczne czyszczenie próbek starszych niż 3 dni. 5. Dedykowany przycisk 'Wyczyść cache i historię pomiarów' w zakładce Opcje.",
+  "releaseNotes": "1. Pełna obsługa oficjalnych modeli szczytu Google Maps (departure_time + traffic_model=best_guess) – zapytanie o trasę w nocy lub w weekend zwraca przewidywany czas dla danego dnia roboczego (np. 45 min w poniedziałek rano zamiast 19 min nocą). 2. Inteligentne wyznaczanie dnia wyjazdu w edytorze trasy na bazie harmonogramu dni tygodnia (daysOfWeek). 3. Czytelna informacja w podsumowaniu trasy wskazująca dzień i godzinę szacunku.",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk",
   "Overwrite": true
 }
