@@ -1,10 +1,10 @@
 {
-  "versionCode": 14,
-  "versionName": "1.9.4",
+  "versionCode": 15,
+  "versionName": "1.9.5",
   "appName": "TrafficAlarm",
   "author": "Misiek",
   "signature": "app by Misiek",
-  "releaseNotes": "1. Pełna integracja Google Directions API (maps.googleapis.com) – uniwersalny endpoint Google Maps z precyzyjnym czasem w korkach i dokładnym dystansem (Warszawa - Katowice ~298 km, Warszawa - Kraków ~295 km). 2. Wbudowany słownik współrzędnych wszystkich miast wojewódzkich i głównych w Polsce (odpowiedź w 0 ms, 100% offline, brak pomyłek z ulicami np. ul. Katowicka). 3. Google Geocoding API w wyszukiwarce i podglądzie mapy. 4. Rysowanie trasy z Google Directions (encoded polyline) na miniaturce mapki. 5. Wyeliminowano błąd pokazywania centrum Warszawy po wpisaniu Kraków.",
+  "releaseNotes": "1. Wyeliminowano blokadę czasu dojazdu (efekt zapadki) – usunięto sztuczne nadpisywanie świeżych wyników z Google Maps i OSRM poprzednimi czasami (previousDurationMin). Czas i dystans przeliczają się natychmiastowo po każdej zmianie trasy. 2. Automatyczne przeliczanie parametrów trasy podczas edycji (debounce) w oknie alarmu. 3. Dynamiczny wykres predykcji korków – koniec z płaskim wykresem, modelowanie szczytu komunikacyjnego (Gauss). 4. Automatyczne czyszczenie próbek starszych niż 3 dni. 5. Dedykowany przycisk 'Wyczyść cache i historię pomiarów' w zakładce Opcje.",
   "apkUrl": "https://raw.githubusercontent.com/michaldaszewski-oss/TrafficAlarm/main/TrafficAlarm-app.apk",
   "Overwrite": true
 }

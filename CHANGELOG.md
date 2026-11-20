@@ -4,6 +4,26 @@ Wszystkie wydania aplikacji **TrafficAlarm** wraz z podsumowaniem wprowadzonych 
 
 ---
 
+## [v1.9.5] - 2026-11-20
+### 🚀 Prawidłowa kalkulacja tras, predykcja szczytu & Zarządzanie cache
+- **Wyeliminowanie blokady czasu dojazdu (efekt zapadki):**
+  - Usunięto błąd, w którym świeże, rzeczywiste wyniki pobierane z Google Maps i OSRM były sztucznie nadpisywane najwyższą historyczną wartością (`previousDurationMin`).
+  - Czasy dojazdu i odległości przeliczają się teraz natychmiast i wiernie po każdej zmianie trasy czy godzinie odjazdu (koniec z zamrażaniem czasu dojazdu).
+- **Automatyczne przeliczanie parametrów trasy podczas edycji (debounce):**
+  - W oknie edycji alarmu zmiana adresu punktu początkowego lub docelowego automatycznie wyzwala przeliczenie kilometrażu i szacowanego czasu (1.2s debounce).
+  - Wyeliminowano zapisywanie starego czasu i dystansu w przypadku edycji trasy.
+- **Dynamiczny i realistyczny wykres predykcji korków:**
+  - Wyeliminowano problem martwego, płaskiego wykresu poziomego.
+  - Model płynnie uwzględnia rozkład natężenia ruchu w godzinach szczytu (krzywa Gaussa dla szczytu porannego i popołudniowego) oraz rzeczywisty trend zmian w bieżącej sesji pomiarowej.
+- **Inteligentne zarządzanie historią pomiarów i retencja danych:**
+  - Pomiary starsze niż 3 dni są automatycznie usuwane przy zapisie nowych próbek, zapobiegając rozrostowi bazy danych i zakłócaniu obliczeń.
+  - Zmiana trasy lub godziny w alarmie automatycznie resetuje historię pomiarów dla danej trasy, chroniąc przed mieszaniem danych ze starych dojazdów.
+  - Wskaźnik dynamiki zmian bazuje wyłącznie na próbkach z ostatniej godziny aktywnego okna.
+- **Dedykowany przycisk «Wyczyść cache i historię pomiarów»:**
+  - Dodano przycisk w zakładce **Opcje**, umożliwiający zresetowanie historii pomiarów, pamięci podręcznej kafelków mapy, miniatur tras oraz geokodera jednym kliknięciem.
+
+---
+
 ## [v1.9.4] - 2026-11-15
 ### 🌐 Pełna integracja Google Directions API & Szybki słownik miast
 - **Priorytetowe Google Directions API dla kluczy Google Maps:**
